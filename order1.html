@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Food</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        window.onload = function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const food = urlParams.get('food');
+            const price = urlParams.get('price');
+            const img = urlParams.get('img');
+            document.getElementById('food-name').textContent = food;
+            document.getElementById('food-price').textContent = "SLE " + price;
+            document.getElementById('food-img').src = img;
+            document.getElementById('food-input').value = food;
+            document.getElementById('price-input').value = price;
+        };
+    </script>
+</head>
+<body>
+    <!-- Navbar Section Starts Here -->
+    <section class="navbar">
+        <div class="container">
+            <!-- Navbar content -->
+        </div>
+    </section>
+    <!-- Navbar Section Ends Here -->
+
+    <!-- Order Form Section Starts Here -->
+    <section class="food-search">
+        <div class="container">
+            <h2 class="text-center text-white">Fill this form to confirm your order.</h2>
+
+            <form action="submit_order.php" method="post" class="order">
+                <fieldset>
+                    <legend>Selected Food</legend>
+                    <div class="food-menu-img">
+                        <img id="food-img" alt="Food Image" class="img-responsive img-curve">
+                    </div>
+                    <div class="food-menu-desc">
+                        <h3 id="food-name"></h3>
+                        <p class="food-price" id="food-price">SLE 55</p>
+                        <div class="order-label">Quantity</div>
+                        <input type="number" name="qty" class="input-responsive" value="1" required>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Delivery Details</legend>
+                    <div class="order-label">Full Name</div>
+                    <input type="text" name="full-name" placeholder="E.g. Joesph Kanu" class="input-responsive" required>
+
+                    <div class="order-label">Phone Number</div>
+                    <input type="tel" name="contact" placeholder="E.g. 078000000" class="input-responsive" required>
+
+                    <div class="order-label">Email</div>
+                    <input type="email" name="email" placeholder="E.g. josephkanu6@gmail.com" class="input-responsive" required>
+
+                    <div class="order-label">Address</div>
+                    <textarea name="address" rows="10" placeholder="E.g. Street, City, Country" class="input-responsive" required></textarea>
+
+                    <input type="hidden" name="food" id="food-input">
+                    <input type="hidden" name="price" id="price-input">
+
+                    <input type="submit" name="submit" value="Confirm Order" class="btn btn-primary">
+                </fieldset>
+            </form>
+        </div>
+    </section>
+    <!-- Order Form Section Ends Here -->
+
+</body>
+</html>

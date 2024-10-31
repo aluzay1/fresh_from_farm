@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Important to make website responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fresh From Farm</title>
+
+    <!-- Link our CSS file -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Link to Font Awesome for cart icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <!-- Navbar Section Starts Here -->
+    <section class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html" title="Logo">
+                    <img src="images/farm-fresh-logo-vector-20368408.jpg" alt="Fresh_from_farm Logo" class="img-responsive">
+                </a>
+            </div>
+
+            <div class="menu text-right">
+                <ul>
+                    <li>
+                        <a href="index.html" class="active">Home</a>
+                    </li>
+                    <li>
+                        <a href="foods.html">Foods</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contact Us</a>
+                    </li>
+                    <li>
+                        <a href="farmer-registration.html">Farmer's Registration</a>
+                    </li>
+                    <li>
+                        <a href="login.html">Login</a>
+                    </li>
+                    <li>
+                        <a href="about.html">About</a>
+                    </li>
+                    <li>
+                        <a href="cart.php" title="Shopping Cart">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-count"><?php echo $count; ?></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="clearfix"></div>
+        </div>
+    </section>
+    <!-- Navbar Section Ends Here -->
+
+    <!-- fOOD sEARCH Section Starts Here -->
+    <section class="food-search text-center">
+        <div class="container">
+            <form action="search_results.php" method="GET">
+                <input type="search" name="query" placeholder="Search for Food.." required>
+                <input type="submit" value="Search" class="btn btn-primary">
+            </form>
+        </div>
+    </section>
+    <!-- fOOD sEARCH Section Ends Here -->
+
+    <!-- CAtegories Section Starts Here -->
+    <section class="categories">
+        <div class="container">
+            <h2 class="text-center">Explore Foods</h2>
+            <a href="vegetable.html">
+                <div class="box-3 float-container">
+                    <img src="images/vegetables 1.jpg" alt="Vegetables" class="img-responsive img-curve">
+                    <h3 class="float-text text-white">Vegetables</h3>
+                </div>
+            </a>
+            <a href="smoothie.html">
+                <div class="box-3 float-container">
+                    <img src="images/smoothie 2.jpg" alt="Smoothie" class="img-responsive img-curve">
+                    <h3 class="float-text text-white">Smoothies</h3>
+                </div>
+            </a>
+            <a href="fruits.html">
+                <div class="box-3 float-container">
+                    <img src="images/fruits.jpg" alt="Fruits" class="img-responsive img-curve">
+                    <h3 class="float-text text-white">Fruits</h3>
+                </div>
+            </a>
+            <div class="clearfix"></div>
+        </div>
+    </section>
+    <!-- Categories Section Ends Here -->
+
+    <!-- fOOD Menu Section Starts Here -->
+<section class="food-menu">
+    <div class="container">
+        <h2 class="text-center">Food Menu</h2>
+
+        <!-- Product: Avocado -->
+        <div class="food-menu-box">
+            <div class="food-menu-img">
+                <img src="images/avocado.jpeg" alt="Avocado" class="img-responsive img-curve">
+            </div>
+            <div class="food-menu-desc">
+                <h4>Avocado</h4>
+                <p class="food-price">SLE 35</p>
+                <p class="food-detail">Fresh from farm</p>
+                <br>
+                <form method="POST" action="add_to_cart.php">
+                    <input type="hidden" name="product_id" value="1"> 
+                    <input type="hidden" name="customer_email" value="<?php echo $_SESSION['user_email']; ?>"> 
+                    <input type="number" name="quantity" value="1" min="1" required>
+                    <button type="submit" name="add_to_cart" class="btn btn-primary">Add to Cart</button>
+                </form>
+        
+            </div>
+        </div>
+
+        <!-- Product: Cabbage -->
+        <div class="food-menu-box">
+            <div class="food-menu-img">
+                <img src="images/ex cabbage.jpg" alt="Cabbage" class="img-responsive img-curve">
+            </div>
+            <div class="food-menu-desc">
+                <h4>Cabbage</h4>
+                <p class="food-price">SLE 55</p>
+                <p class="food-detail">Fresh from farm</p>
+                <br>
+                <form method="POST" action="add_to_cart.php">
+                    <input type="hidden" name="product_id" value="2"> 
+                    <input type="hidden" name="customer_email" value="<?php echo $_SESSION['user_email']; ?>"> 
+                    <input type="number" name="quantity" value="1" min="1" required>
+                    <button type="submit" name="add_to_cart" class="btn btn-primary">Add to Cart</button>
+                </form>
+               
+            </div>
+        </div>
+
+        <!-- Product: Mango -->
+        <div class="food-menu-box">
+            <div class="food-menu-img">
+                <img src="images/mango.jpeg" alt="Mango" class="img-responsive img-curve">
+            </div>
+            <div class="food-menu-desc">
+                <h4>Mango</h4>
+                <p class="food-price">SLE 15</p>
+                <p class="food-detail">Fresh from farm</p>
+                <br>
+                <form method="POST" action="add_to_cart.php">
+                    <input type="hidden" name="product_id" value="3"> 
+                    <input type="hidden" name="customer_email" value="<?php echo $_SESSION['user_email']; ?>"> 
+                    <input type="number" name="quantity" value="1" min="1" required>
+                    <button type="submit" name="add_to_cart" class="btn btn-primary">Add to Cart</button>
+                </form>
+              
+            </div>
+        </div>
+
+        <!-- Product: Onion -->
+        <div class="food-menu-box">
+            <div class="food-menu-img">
+                <img src="images/onion (1).jpeg" alt="Onion" class="img-responsive img-curve">
+            </div>
+            <div class="food-menu-desc">
+                <h4>Onion</h4>
+                <p class="food-price">SLE 35</p>
+                <p class="food-detail">Fresh from farm</p>
+                <br>
+                <form method="POST" action="add_to_cart.php">
+                    <input type="hidden" name="product_id" value="4"> 
+                    <input type="hidden" name="customer_email" value="<?php echo $_SESSION['user_email']; ?>"> 
+                    <input type="number" name="quantity" value="1" min="1" required>
+                    <button type="submit" name="add_to_cart" class="btn btn-primary">Add to Cart</button>
+                </form>
+                
+            </div>
+        </div>
+
+        <!-- Product: Lettuce -->
+        <div class="food-menu-box">
+            <div class="food-menu-img">
+                <img src="images/lettuce.jpeg" alt="Lettuce" class="img-responsive img-curve">
+            </div>
+            <div class="food-menu-desc">
+                <h4>Lettuce</h4>
+                <p class="food-price">SLE 40</p>
+                <p class="food-detail">Fresh from farm</p>
+                <br>
+                <form method="POST" action="add_to_cart.php">
+                    <input type="hidden" name="product_id" value="5"> 
+                    <input type="hidden" name="customer_email" value="<?php echo $_SESSION['user_email']; ?>"> 
+                    <input type="number" name="quantity" value="1" min="1" required>
+                    <button type="submit" name="add_to_cart" class="btn btn-primary">Add to Cart</button>
+                </form>
+              
+            </div>
+        </div>
+
+        <!-- Product: Pineapple -->
+        <div class="food-menu-box">
+            <div class="food-menu-img">
+                <img src="images/pineapple.jpeg" alt="Pineapple" class="img-responsive img-curve">
+            </div>
+            <div class="food-menu-desc">
+                <h4>Pineapple</h4>
+                <p class="food-price">SLE 20</p>
+                <p class="food-detail">Fresh from farm</p>
+                <br>
+                <form method="POST" action="add_to_cart.php">
+                    <input type="hidden" name="product_id" value="6"> 
+                    <input type="hidden" name="customer_email" value="<?php echo $_SESSION['user_email']; ?>"> 
+                    <input type="number" name="quantity" value="1" min="1" required>
+                    <button type="submit" name="add_to_cart" class="btn btn-primary">Add to Cart</button>
+                </form>
+               
+            </div>
+        </div>
+
+        <div class="clearfix"></div>
+    </div>
+</section>
+<!-- fOOD Menu Section Ends Here -->
+
+    <!-- social Section Starts Here -->
+    <section class="social">
+        <div class="container text-center">
+            <ul>
+                <li>
+                    <a href="#"><img src="https://img.icons8.com/fluent/50/000000/facebook-new.png"/></a>
+                </li>
+                <li>
+                    <a href="#"><img src="https://img.icons8.com/fluent/48/000000/instagram-new.png"/></a>
+                </li>
+                <li>
+                    <a href="#"><img width="50" height="50" src="https://img.icons8.com/ios-filled/50/twitterx--v1.png" alt="twitterx--v1"/></a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!-- social Section Ends Here -->
+
+
+    <!-- footer Section Starts Here -->
+    <section class="footer">
+        <div class="container text-center">
+            <p>All rights reserved. Designed By <a href="#">Alusine Kuyateh</a></p>
+        </div>
+    </section>
+    <!-- footer Section Ends Here -->
+
+</body>
+</html>

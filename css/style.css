@@ -1,0 +1,501 @@
+/* 
+    Author: Alusine Kuyateh;
+    Theme: fresh from farm;
+    version: 1.0;
+*/
+
+/* CSS for All */
+*{
+    margin: 0 0;
+    padding: 0 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container{
+    width: 80%;
+    margin: 0 auto;
+    padding: 1%;
+}
+.img-responsive{
+    width: 100%;
+}
+.img-curve{
+    border-radius: 15px;
+}
+
+.text-right{
+    text-align: right;
+}
+.text-center{
+    text-align: center;
+}
+.text-left{
+    text-align: left;
+}
+.text-white{
+    color: white;
+}
+
+.clearfix{
+    clear: both;
+    float: none;
+}
+
+a{
+    color: #08e08d;
+    text-decoration: none;
+}
+a:hover{
+    color: #7ef58e;
+}
+
+.btn{
+    padding: 1%;
+    border: none;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+.btn-primary{
+    background-color: #08e08d;
+    color: white;
+    cursor: pointer;
+}
+.btn-primary:hover{
+    color: white;
+    background-color: #7ef58e;
+}
+h2{
+    color: #2f3542;
+    font-size: 2rem;
+    margin-bottom: 5%;
+   
+}
+h3{
+    font-size: 1.5rem;
+}
+
+
+.float-container{
+    position: relative;
+}
+.float-text{
+    position: absolute;
+    bottom: 50px;
+    left: 40%;
+}
+fieldset{
+    border: 1px solid white;
+    margin: 5%;
+    padding: 3%;
+    border-radius: 5px;
+}
+
+/*CSS for Back to Home in login*/
+.back-home{
+    margin-top: 15%;
+}
+
+.back-home a{
+    text-decoration: none;
+    font-size: 14px;
+    color: #7ef58e;
+}
+
+.back-home a:hover{
+    text-decoration: underline;
+}
+
+/* CSS for Navbar Section - Static */
+.navbar {
+    background-color: #ffffff;
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;  /* Full width */
+    top: 0;  /* Sticks to the top of the viewport */
+    left: 0;
+    z-index: 1000; /* Ensures it stays on top of other elements */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow effect */
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 0 1%;  /* Adjust to avoid shifting content */
+}
+
+.logo {
+    width: 5%;
+    float: left;
+}
+
+.menu {
+    float: right;
+    line-height: 60px; /* Aligns items vertically */
+}
+
+.menu ul {
+    list-style-type: none;
+}
+
+.menu ul li {
+    display: inline;
+    padding: 0 10px;
+    font-weight: bold;
+}
+
+.menu a {
+    color: #27db17;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.menu a:hover {
+    color: #7ef58e;
+}
+
+/*highlight the active page*/
+.navbar a.active{
+    color: #79a77f;
+    font-weight: bold;
+}
+
+/* Add space at the top of the page content to avoid overlap */
+.contact,
+.food-search, 
+.categories, 
+.food-menu,
+.registration,
+.about,
+.login,
+.profile {
+    margin-top: 90px; /* Adjust based on navbar height */
+    margin-bottom: -7%;
+}
+
+
+
+
+/* CSS for Food SEarch Section */
+
+.food-search{
+    background-image: url(../images/bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 7% 0;
+}
+
+.food-search input[type="search"]{
+    width: 50%;
+    padding: 1%;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+}
+
+
+/* CSS for Categories */
+.categories{
+    padding: 4% 0;
+}
+
+.box-3{
+    width: 28%;
+    float: left;
+    margin: 2%;
+}
+
+/*css for registration form */
+.registration{
+    padding: 5%;
+    background-color: #f4f4f4;
+}
+
+.input-box{
+    margin-bottom: 15px;
+}
+
+.input-box label{
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-box input{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+/* CSS for Food Menu */
+.food-menu{
+    background-color: #ececec;
+    padding: 4% 0;
+}
+.food-menu-box{
+    width: 43%;
+    margin: 1%;
+    padding: 2%;
+    float: left;
+    background-color: white;
+    border-radius: 15px;
+}
+
+.food-menu-img{
+    width: 20%;
+    float: left;
+}
+
+.food-menu-desc{
+    width: 70%;
+    float: left;
+    margin-left: 8%;
+}
+
+.food-price{
+    font-size: 1.2rem;
+    margin: 2% 0;
+}
+.food-detail{
+    font-size: 1rem;
+    color: #747d8c;
+}
+
+/*css for cart table*/
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+/* CSS for Social */
+.social ul{
+    list-style-type: none;
+}
+.social ul li{
+    display: inline;
+    padding: 1%;
+}
+
+.social{
+    margin-top: 8%;
+    margin-bottom: -2%;
+}
+/* for Order Section */
+.order{
+    width: 50%;
+    margin: 0 auto;
+}
+.input-responsive{
+    width: 96%;
+    padding: 1%;
+    margin-bottom: 3%;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+.order-label{
+    margin-bottom: 1%; 
+    font-weight: bold;
+}
+
+/* About Section Styles */
+.about {
+    background-color: #fff;
+    padding: 60px 0;
+}
+
+.about-content {
+    text-align: left;
+}
+
+.about-content h3 {
+    color: #4CAF50;
+    margin-top: 30px;
+    font-size: 24px;
+}
+
+.about-content p, .about-content ul {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.about-content ul {
+    padding-left: 20px;
+}
+
+/* Team Section Styles */
+.team {
+    display: flex;
+    justify-content: space-around; /* Aligns team members horizontally */
+    flex-wrap: wrap; /* Ensures responsiveness on smaller screens */
+    margin-top: 30px;
+}
+
+.team-member {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    padding: 20px;
+    width: 30%; /* Width for each team member box */
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.team-member:hover {
+    transform: translateY(-10px); /* Hover effect */
+}
+
+.team-member img {
+    width: 100px; /* Fixed size for team member images */
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.team-member h4 {
+    margin-bottom: 10px;
+    color: #4CAF50;
+    font-size: 20px;
+}
+
+.team-member p {
+    font-size: 14px;
+    color: #777;
+}
+
+/* Footer Section Styles */
+.footer {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 0;
+    margin-top: 40px;
+}
+
+.footer p {
+    margin: 0;
+}
+
+.footer a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+
+
+/* Success page styling */
+.success-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #e6f7e6;
+}
+
+.special-container {
+    text-align: center;
+    background-color: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+}
+
+
+.buttons a {
+    text-decoration: none;
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+
+.btn-secondary {
+    background-color: #007bff;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: #0056b3;
+}
+
+
+
+
+
+/* CSS for Mobile Size or Smaller Screen */
+
+@media only screen and (max-width:768px){
+    .logo{
+        width: 80%;
+        float: none;
+        margin: 1% auto;
+    }
+
+    .menu ul{
+        text-align: center;
+    }
+
+    .food-search input[type="search"]{
+        width: 90%;
+        padding: 2%;
+        margin-bottom: 3%;
+    }
+
+    .btn{
+        width: 91%;
+        padding: 2%;
+    }
+
+    .food-search{
+        padding: 10% 0;
+    }
+
+    .categories{
+        padding: 20% 0;
+    }
+    h2{
+        margin-bottom: 10%;
+    }
+    .box-3{
+        width: 100%;
+        margin: 4% auto;
+    }
+
+    .food-menu{
+        padding: 20% 0;
+    }
+
+    .food-menu-box{
+        width: 90%;
+        padding: 5%;
+        margin-bottom: 5%;
+    }
+    .social{
+        padding: 5% 0;
+    }
+    .order{
+        width: 100%;
+    }
+  
+}

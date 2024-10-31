@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foods Menu</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar Section Starts Here -->
+    <section class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="Index.html" title="Logo">
+                    <img src="images/farm-fresh-logo-vector-20368408.jpg" alt="Fresh_from_farm Logo" class="img-responsive">
+                </a>
+            </div>
+
+            <div class="menu text-right">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="categories.html">Categories</a></li>
+                    <li><a href="foods.html">Foods</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="farmer-registration.html">Farmer's Registration</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li>
+                        <a href="cart.php" title="Shopping Cart">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-count"><?php echo $count; ?></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </section>
+    <!-- Navbar Section Ends Here -->
+
+    <!-- Food Search Section Starts Here -->
+    <section class="food-search text-center">
+        <div class="container">
+            <form action="search_results.php" method="GET">
+                <input type="search" name="query" placeholder="Search for Food.." required>
+                <input type="submit" value="Search" class="btn btn-primary">
+            </form>
+        </div>
+    </section>
+    <!-- Food Search Section Ends Here -->
+
+    <!-- Smoothies Menu Section Starts Here -->
+    <section class="food-menu">
+        <div class="container">
+            <h2 class="text-center">Smoothies</h2>
+
+        <div class="food-menu-box">
+            <div class="food-menu-img">
+                <img src="images/Green Detox.jpeg" alt="Green Detox" class="img-responsive img-curve">
+            </div>
+
+            <div class="food-menu-desc">
+                <h4>Green Detox</h4>
+                <p class="food-price">SLE 80</p>
+                <p class="food-detail">
+                    A refreshing blend of nutrient-rich greens, including spinach and cucumber
+                </p>
+                <br>
+                <form method="POST" action="add_to_cart.php">
+                    <input type="hidden" name="product_id" value="16"> 
+                    <input type="hidden" name="customer_email" value="<?php echo $_SESSION['user_email']; ?>"> 
+                    <input type="number" name="quantity" value="1" min="1" required>
+                    <button type="submit" name="add_to_cart" class="btn btn-primary">Add to Cart</button>
+                </form>
+               
+            </div>
+        </div>
+
+        <div class="food-menu-box">
+            <div class="food-menu-img">
+                <img src="images/Mixed berries.jpeg" alt="Mixed Berries and Banana" class="img-responsive img-curve">
+            </div>
+
+            <div class="food-menu-desc">
+                <h4>Mixed Berries and Banana</h4>
+                <p class="food-price">SLE 100</p>
+                <p class="food-detail">
+                    A vibrant blend of berries and banana for refreshing energy
+                </p>
+                <br>
+                <form method="POST" action="add_to_cart.php">
+                    <input type="hidden" name="product_id" value="17"> 
+                    <input type="hidden" name="customer_email" value="<?php echo $_SESSION['user_email']; ?>"> 
+                    <input type="number" name="quantity" value="1" min="1" required>
+                    <button type="submit" name="add_to_cart" class="btn btn-primary">Add to Cart</button>
+                </form>
+               
+            </div>
+        </div>
+
+        <div class="food-menu-box">
+            <div class="food-menu-img">
+                <img src="images/Mango Strawberry.jpeg" alt="Mango Strawberry and Pineapple" class="img-responsive img-curve">
+            </div>
+
+            <div class="food-menu-desc">
+                <h4>Mango Strawberry and Pineapple</h4>
+                <p class="food-price">SLE 70</p>
+                <p class="food-detail">
+                    Tropical mix of mango, strawberry, and pineapple for delicious refreshment
+                </p>
+                <br>
+                <form method="POST" action="add_to_cart.php">
+                    <input type="hidden" name="product_id" value="18"> 
+                    <input type="hidden" name="customer_email" value="<?php echo $_SESSION['user_email']; ?>"> 
+                    <input type="number" name="quantity" value="1" min="1" required>
+                    <button type="submit" name="add_to_cart" class="btn btn-primary">Add to Cart</button>
+                </form>
+              
+            </div>
+        </div>
+
+        <div class="food-menu-box">
+            <div class="food-menu-img">
+                <img src="images/Watermelon and cucumber.jpeg" alt="Watermelon and Cucumber" class="img-responsive img-curve">
+            </div>
+
+            <div class="food-menu-desc">
+                <h4>Watermelon and Cucumber</h4>
+                <p class="food-price">SLE 60</p>
+                <p class="food-detail">
+                    Hydrating blend of watermelon and cucumber for refreshing taste
+                </p>
+                <br>
+                <form method="POST" action="add_to_cart.php">
+                    <input type="hidden" name="product_id" value="19"> 
+                    <input type="hidden" name="customer_email" value="<?php echo $_SESSION['user_email']; ?>"> 
+                    <input type="number" name="quantity" value="1" min="1" required>
+                    <button type="submit" name="add_to_cart" class="btn btn-primary">Add to Cart</button>
+                </form>
+              
+            </div>
+        </div>
+
+        <div class="food-menu-box">
+            <div class="food-menu-img">
+                <img src="images/Papaya and Banana.jpeg" alt="Papaya and Banana" class="img-responsive img-curve">
+            </div>
+
+            <div class="food-menu-desc">
+                <h4>Papaya and Banana</h4>
+                <p class="food-price">SLE 70</p>
+                <p class="food-detail">
+                    Creamy mix of papaya and banana for tropical delight 
+                </p>
+                <br>
+                <form method="POST" action="add_to_cart.php">
+                    <input type="hidden" name="product_id" value="20"> 
+                    <input type="hidden" name="customer_email" value="<?php echo $_SESSION['user_email']; ?>"> 
+                    <input type="number" name="quantity" value="1" min="1" required>
+                    <button type="submit" name="add_to_cart" class="btn btn-primary">Add to Cart</button>
+                </form>
+               
+            </div>
+        </div>
+
+        <div class="food-menu-box">
+            <div class="food-menu-img">
+                <img src="images/Carrot and Pineapple.jpeg" alt="Carrot and Pineapples" class="img-responsive img-curve">
+            </div>
+
+            <div class="food-menu-desc">
+                <h4>Carrot and Pineapple</h4>
+                <p class="food-price">SLE 70</p>
+                <p class="food-detail">
+                    Bright blend of carrot and pineapple for zesty refreshment
+                </p>
+                <br>
+                <form method="POST" action="add_to_cart.php">
+                    <input type="hidden" name="product_id" value="21"> <!-- Change value to product ID -->
+                    <input type="hidden" name="customer_email" value="<?php echo $_SESSION['user_email']; ?>"> <!-- Assuming user email is stored in session -->
+                    <input type="number" name="quantity" value="1" min="1" required>
+                    <button type="submit" name="add_to_cart" class="btn btn-primary">Add to Cart</button>
+                </form>
+               
+            </div>
+        </div>
+
+
+        <div class="clearfix"></div>
+
+        
+
+    </div>
+
+</section>
+    <!-- Smoothies Menu Section Ends Here -->
+
+    <!-- Social Section Starts Here -->
+    <section class="social">
+        <div class="container text-center">
+            <ul>
+                <li><a href="#"><img src="https://img.icons8.com/fluent/50/000000/facebook-new.png"/></a></li>
+                <li><a href="#"><img src="https://img.icons8.com/fluent/48/000000/instagram-new.png"/></a></li>
+                <li><a href="#"><img width="50" height="50" src="https://img.icons8.com/ios-filled/50/twitterx--v1.png" alt="twitterx--v1"/></a></li>
+            </ul>
+        </div>
+    </section>
+    <!-- Social Section Ends Here -->
+
+    <!-- Footer Section Starts Here -->
+    <section class="footer">
+        <div class="container text-center">
+            <p>All rights reserved. Designed By <a href="#">Alusine Kuyateh</a></p>
+        </div>
+    </section>
+    <!-- Footer Section Ends Here -->
+</body>
+</html>

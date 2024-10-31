@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Successful</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<section class="success-page">
+    <div class="special-container">
+        <h1>🎉 Thank You, <?php echo htmlspecialchars($_GET['name']); ?>!</h1>
+        <p>Your registration was successful. We are excited to have you as part of Fresh From Farm.</p>
+        
+        <div class="buttons">
+            <a href="index.html" class="btn btn-primary">Go to Home</a>
+            <a href="login.html" class="btn btn-secondary">Login Now</a>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>
